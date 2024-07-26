@@ -1,0 +1,22 @@
+.main-font{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.primary-color-bg{
+    background-color: #578cbe;
+}
+.secondary-color-bg{
+    background-color: #2b4e7c;
+}
+.tertiery-color-bg{
+    background-color: #eef3f0;
+}
+.primary-color-txt{
+    color:  #578cbe;
+}
+.secondary-color-txt{
+    color:  #2b4e7c;
+}
+.tertiery-color-txt{
+    color: #eef3f0;
+}
