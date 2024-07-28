@@ -9,12 +9,40 @@
 </head>
 <body class="tertiery-color-bg">
 
-    <nav class="navbar navbar-expand-md primary-color-bg">
+    <nav class="navbar navbar-expand-md primary-color-bg fixed-top">
         <div class="container-fluid">
-            <div class="navbar-brand tertiery-color-txt title" data-bs-toggle="modal" data-bs-target="#aboutModal"></div>
+            <div class="tertiery-color-txt title"></div>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link tertiery-color-txt" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tertiery-color-txt" href="#experience">Experience</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
+
+    <div class="col-md-12 first-panel"  id="about">
+        <div col-md-6>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="Content/me.jpg" class="img-fluid rounded-5" alt="photo of me">
+                </div>
+                <div class="col-md-4">
+                    <h1>Hello I'm James Tolliver</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12" style="height: 1000px; background-color: aliceblue;" id="experience">
+
+    </div>
 
     <div class="modal modal-lg" id="aboutModal">
         <div class="modal-dialog">
@@ -24,16 +52,7 @@
                     <button type="button" class="btn-close tertiery-color-bg" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body tertiery-color-bg secondary-color-txt">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <img src="Content/me.jpg" class="img-fluid rounded-5" alt="photo of me">
-                            </div>
-                            <div class="col-md-7">
-                                Hello I'm James Tolliver!
-                            </div>
-                        </div> 
-                    </div>
+                    
                 </div>
             </div>
         </div>

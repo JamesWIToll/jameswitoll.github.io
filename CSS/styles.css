@@ -20,3 +20,11 @@
 .tertiery-color-txt{
     color: #eef3f0;
 }
+
+li {
+    margin-right: 10px;
+}
+
+.first-panel {
+    margin-top: 5%;
+}
