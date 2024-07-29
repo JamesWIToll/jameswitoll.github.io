@@ -9,9 +9,9 @@
 </head>
 <body class="tertiery-color-bg">
 
-    <nav class="navbar navbar-expand-md primary-color-bg fixed-top">
+    <nav class="navbar navbar-expand-md primary-color-bg sticky-top">
         <div class="container-fluid">
-            <div class="tertiery-color-txt title"></div>
+            <div class="tertiery-color-txt"><h4 class="title"></h4></div>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -21,43 +21,55 @@
                     <li class="nav-item">
                         <a class="nav-link tertiery-color-txt" href="#experience">Experience</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link tertiery-color-txt" href="#randNumGen">Random</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
 
-    <div class="col-md-12 first-panel"  id="about">
-        <div col-md-6>
+    <div class="card"  id="about">
+        <div class="col-md-12 card-body tertiery-color-bg">
             <div class="row">
-                <div class="col-md-2">
-                    <img src="Content/me.jpg" class="img-fluid rounded-5" alt="photo of me">
+                <div class="col-md-3">
+                    <img src="Content/me.png" class="img-fluid rounded-5" height="100%">
                 </div>
-                <div class="col-md-4">
-                    <h1>Hello I'm James Tolliver</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12" style="height: 1000px; background-color: aliceblue;" id="experience">
-
-    </div>
-
-    <div class="modal modal-lg" id="aboutModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header secondary-color-bg tertiery-color-txt">
-                    <div class="modal-title"><b>About</b></div>
-                    <button type="button" class="btn-close tertiery-color-bg" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body tertiery-color-bg secondary-color-txt">
-                    
+                <div class="col-md-6">
+                    <h3 class="secondary-color-txt">Hello I'm <b>James Tolliver</b>, but I go by <b>Wesley</b>! </h3>
+                    <h4 class="secondary-color-txt" style="padding-top: 2%;"> 
+                                                                I'm a systems programmer with a wide range of skills from web dev to database 
+                                                                administration to simple game dev. I have a passion for programming and I'm always seeking 
+                                                                new ways to develop practical and extendable software.
+                    </h4>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="col-md-12" id="experience">
+
+    </div>
+
+    <div class="col-md-12 card" id="randNumGen">
+        <div class="row card-body tertiery-color-bg">
+            <form class="col-md-6">
+                <div class="form-control primary-color-bg tertiery-color-txt">
+                    <label for="minInput">Min Value</label>
+                    <input type="number" class="form-control tertiery-color-bg secondary-color-txt" id="minInput"> 
+                    <label for="maxInput">Max Value</label>
+                    <input type="number" class="form-control tertiery-color-bg secondary-color-txt" id="maxInput"> 
+                    <button class="btn secondary-color-bg tertiery-color-txt" id="submitRandNum">Generate</button>
+                </div>
+            </form>
+            <div class="col-md-6">
+                 <h3 class="secondary-color-txt">Random Number: <span id="randNumField"></span></h3>
+                 <p class="secondary-color-txt">A Simple random number generater to demonstrate how semi-random number generation works to my curious partner</p>
+            </div>
+        </div>
+        
+    </div>
 </body>
 </html>
 
@@ -67,5 +79,28 @@
     const title = "James Tolliver - Systems/Game Programmer";
     $(".title").text(title);
 
+
+    function randNum(max, min){
+        let range = max-min+1;
+
+        let currDate = new Date();
+
+        debugger;
+
+        let value = Number(min) + (currDate.getMilliseconds()%range);
+
+        return value;
+    }
+
+    $("#submitRandNum").on("click", () => {
+        let minVal = $("#minInput").val();
+        let maxVal = $("#maxInput").val();
+
+        debugger;
+
+        let output = randNum(maxVal, minVal);
+
+        $("#randNumField").text(output);
+    });
 </script>
 
