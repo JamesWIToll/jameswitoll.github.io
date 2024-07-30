@@ -34,12 +34,20 @@ li {
     margin-top: 5%;
 }
 
+
+.accordion-button{
+    
+    background-color: #2b4e7c !important;
+    color: #eef3f0 !important;
+}
+
 .anchor{
     scroll-margin-top: 150px;
 }
 
-@media (max-width: 500px) {
+
+@media (max-width: 600px) {
     .anchor{
-        scroll-margin-top: 400px;
+        scroll-margin-top: 500px;
     };
 }
