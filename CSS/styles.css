@@ -26,5 +26,20 @@ li {
 }
 
 .body-item{
-    padding:2%;
+    margin:2%;
+}
+
+.body-panel{
+    padding-top: 5%;
+    margin-top: 5%;
+}
+
+.anchor{
+    scroll-margin-top: 150px;
+}
+
+@media (max-width: 500px) {
+    .anchor{
+        scroll-margin-top: 400px;
+    };
 }
